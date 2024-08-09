@@ -15,8 +15,8 @@ export const action: ActionFunction = async ({ request }) => {
   const formData = await request.formData();
 
   const formDataObject = {
-    name: formData.get("username") as string,
-    email: formData.get("token") as string,
+    username: formData.get("username") as string,
+    token: formData.get("token") as string,
   };
 
   try {
