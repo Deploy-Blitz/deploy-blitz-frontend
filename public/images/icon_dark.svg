@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="200px" height="200px" viewBox="0 0 200 200">
+    <defs>
+      <filter id="colorFill" color-interpolation-filters="sRGB">
+          <feColorMatrix type="matrix" values="0 0 0 0 0.090196078431373                   0 0 0 0 0.086274509803922                   0 0 0 0 0.24313725490196                   0 0 0 1 0 "/>
+      </filter>
+    </defs>
+    <image id="icon" xlink:href="https://raw.githubusercontent.com/Deploy-Blitz/deploy-blitz-core/main/images/icon_dark.png" style="filter: url(#colorFill);" transform="translate(20 20) scale(0.8)"/>
+</svg>

@@ -1,3 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  .html-custom {
+    @apply scroll-smooth pt-[69px];
+  }
+
+  .html-error {
+    @apply scroll-smooth;
+  }
+}
