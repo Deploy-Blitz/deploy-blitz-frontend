@@ -14,6 +14,8 @@ export const meta: MetaFunction = () => {
 export const action: ActionFunction = async ({ request }) => {
   const formData = await request.formData();
 
+  if (formData.get("phone")) return json({ success: false });
+
   const formDataObject = {
     username: formData.get("username") as string,
     token: formData.get("token") as string,
@@ -52,7 +54,7 @@ export default function SignUp() {
           </Paragraph> */}
         </div>
       </div>
-      <FormRepos />
+      <FormRepos variant="sign-up" />
     </div>
   );
 }

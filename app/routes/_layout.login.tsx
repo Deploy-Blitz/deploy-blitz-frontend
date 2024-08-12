@@ -15,12 +15,9 @@ export const meta: MetaFunction = () => {
 export const action: ActionFunction = async ({ request }) => {
   const formData = await request.formData();
 
-  /* if ((formData.get("address") as string).toString().length > 0)
-      return json({ success: false }); */
-
   const formDataObject = {
-    name: formData.get("username") as string,
-    email: formData.get("token") as string,
+    username: formData.get("username") as string,
+    token: formData.get("token") as string,
   };
 
   try {
@@ -58,13 +55,16 @@ export default function Login() {
         </div>
       </div>
       {/* <FormRepos /> */}
-      <div className="w-fit mx-auto">
-        <Button
-          variant="url"
-          onClick={() => navigate({ pathname: "/sign-up" })}
-        >
-          Don't have a registered user? Sign up.
-        </Button>
+      <div className="flex flex-col gap-6">
+        <FormRepos variant="login" />
+        <div className="w-fit mx-auto">
+          <Button
+            variant="url"
+            onClick={() => navigate({ pathname: "/sign-up" })}
+          >
+            Don't have a registered user? Sign up.
+          </Button>
+        </div>
       </div>
     </div>
   );
